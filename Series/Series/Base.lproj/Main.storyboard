@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n6B-Qf-c8q">
-                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="576"/>
+                                <color key="backgroundColor" red="0.1993111108" green="0.52393715409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="hGO-NK-1a3">
                                     <size key="itemSize" width="120" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,9 +37,9 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CcU-iI-eXh">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ya-gj-Bhs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ya-gj-Bhs">
                                                     <rect key="frame" x="8" y="160" width="104" height="32"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -69,11 +69,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rd-E4-Nb9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Busqueda..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rd-E4-Nb9">
                                 <rect key="frame" x="80" y="30" width="275" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldChanged:forEvent:" destination="BYZ-38-t0r" eventType="editingChanged" id="R51-og-jGf"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="o0Z-RX-frp">
                                 <rect key="frame" x="10" y="20" width="50" height="50"/>
@@ -82,28 +85,42 @@
                                     <constraint firstAttribute="height" constant="50" id="YSw-bG-hWN"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin Resultados..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-Zl-L6E">
+                                <rect key="frame" x="0.0" y="70" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ffn-vQ-2hu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.75761740919999998" blue="0.35994943130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n6B-Qf-c8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0bl-P9-KEl"/>
                             <constraint firstItem="n6B-Qf-c8q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AGR-SV-mKQ"/>
-                            <constraint firstItem="n6B-Qf-c8q" firstAttribute="top" secondItem="o0Z-RX-frp" secondAttribute="bottom" constant="10" id="GQJ-wQ-lnq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bT5-Zl-L6E" secondAttribute="trailing" id="B6Y-PL-c0Q"/>
                             <constraint firstItem="0Rd-E4-Nb9" firstAttribute="leading" secondItem="o0Z-RX-frp" secondAttribute="trailing" constant="20" id="HId-f3-xGc"/>
                             <constraint firstItem="n6B-Qf-c8q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IHj-MS-1sZ"/>
+                            <constraint firstItem="bT5-Zl-L6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MmE-nK-Odn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Rd-E4-Nb9" secondAttribute="trailing" constant="20" id="OhH-y3-3d9"/>
                             <constraint firstItem="0Rd-E4-Nb9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ol0-LF-JvB"/>
                             <constraint firstItem="o0Z-RX-frp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="SWY-U5-zPN"/>
+                            <constraint firstItem="bT5-Zl-L6E" firstAttribute="top" secondItem="o0Z-RX-frp" secondAttribute="bottom" id="Z3x-BI-w8L"/>
                             <constraint firstItem="o0Z-RX-frp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rPM-ej-cpQ"/>
+                            <constraint firstItem="n6B-Qf-c8q" firstAttribute="top" secondItem="bT5-Zl-L6E" secondAttribute="bottom" id="wdZ-g3-Bgl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="n6B-Qf-c8q" id="eWy-5T-oGL"/>
+                        <outlet property="notSeriesLabel" destination="bT5-Zl-L6E" id="QUG-p6-GlF"/>
+                        <outlet property="searchTextField" destination="0Rd-E4-Nb9" id="Ueq-OF-DQx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665.21739130434787" y="24.456521739130437"/>
+            <point key="canvasLocation" x="664.79999999999995" y="23.838080959520241"/>
         </scene>
     </scenes>
     <resources>

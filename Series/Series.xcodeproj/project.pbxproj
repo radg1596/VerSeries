@@ -14,6 +14,14 @@
 		636B43C021793F4500BDFA02 /* SeriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B43BF21793F4500BDFA02 /* SeriesTests.swift */; };
 		636B43CB21793F4500BDFA02 /* SeriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B43CA21793F4500BDFA02 /* SeriesUITests.swift */; };
 		636B43DD2179504F00BDFA02 /* SerieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B43DC2179504F00BDFA02 /* SerieCollectionViewCell.swift */; };
+		638C34E1217AE996001F6977 /* SerieIntermediate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34E0217AE996001F6977 /* SerieIntermediate.swift */; };
+		638C34E3217AE9E6001F6977 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34E2217AE9E6001F6977 /* Serie.swift */; };
+		638C34E5217AEA16001F6977 /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34E4217AEA16001F6977 /* ImageURL.swift */; };
+		638C34E7217AEA42001F6977 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34E6217AEA42001F6977 /* Schedule.swift */; };
+		638C34E9217AEA6E001F6977 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34E8217AEA6E001F6977 /* Network.swift */; };
+		638C34EC217AEDC7001F6977 /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34EB217AEDC7001F6977 /* ClientAPI.swift */; };
+		638C34EE217AEDF5001F6977 /* SeriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34ED217AEDF5001F6977 /* SeriesService.swift */; };
+		638C34F0217AEE23001F6977 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C34EF217AEE23001F6977 /* Chapter.swift */; };
 		63C371A62179563200A90C2C /* SeriesPreviewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C371A52179563200A90C2C /* SeriesPreviewDataSource.swift */; };
 		63C371A82179577E00A90C2C /* SeriesPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C371A72179577E00A90C2C /* SeriesPreviewViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +57,14 @@
 		636B43CA21793F4500BDFA02 /* SeriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesUITests.swift; sourceTree = "<group>"; };
 		636B43CC21793F4500BDFA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636B43DC2179504F00BDFA02 /* SerieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCollectionViewCell.swift; sourceTree = "<group>"; };
+		638C34E0217AE996001F6977 /* SerieIntermediate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieIntermediate.swift; sourceTree = "<group>"; };
+		638C34E2217AE9E6001F6977 /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		638C34E4217AEA16001F6977 /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
+		638C34E6217AEA42001F6977 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		638C34E8217AEA6E001F6977 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		638C34EB217AEDC7001F6977 /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
+		638C34ED217AEDF5001F6977 /* SeriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesService.swift; sourceTree = "<group>"; };
+		638C34EF217AEE23001F6977 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		63C371A52179563200A90C2C /* SeriesPreviewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesPreviewDataSource.swift; sourceTree = "<group>"; };
 		63C371A72179577E00A90C2C /* SeriesPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesPreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +125,8 @@
 		636B43A921793F4200BDFA02 /* Series */ = {
 			isa = PBXGroup;
 			children = (
+				638C34EA217AEDB1001F6977 /* Services */,
+				638C34DF217AE981001F6977 /* Models */,
 				6362EC62217AE76A00DE9F26 /* Delegates */,
 				636B43DE2179543B00BDFA02 /* CollectionView */,
 				636B43AE21793F4200BDFA02 /* Main.storyboard */,
@@ -145,6 +163,28 @@
 				636B43DC2179504F00BDFA02 /* SerieCollectionViewCell.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		638C34DF217AE981001F6977 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				638C34E4217AEA16001F6977 /* ImageURL.swift */,
+				638C34E2217AE9E6001F6977 /* Serie.swift */,
+				638C34E8217AEA6E001F6977 /* Network.swift */,
+				638C34E6217AEA42001F6977 /* Schedule.swift */,
+				638C34E0217AE996001F6977 /* SerieIntermediate.swift */,
+				638C34EF217AEE23001F6977 /* Chapter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		638C34EA217AEDB1001F6977 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				638C34EB217AEDC7001F6977 /* ClientAPI.swift */,
+				638C34ED217AEDF5001F6977 /* SeriesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +318,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638C34E5217AEA16001F6977 /* ImageURL.swift in Sources */,
 				63C371A82179577E00A90C2C /* SeriesPreviewViewController.swift in Sources */,
 				636B43AB21793F4200BDFA02 /* AppDelegate.swift in Sources */,
+				638C34F0217AEE23001F6977 /* Chapter.swift in Sources */,
+				638C34EC217AEDC7001F6977 /* ClientAPI.swift in Sources */,
+				638C34EE217AEDF5001F6977 /* SeriesService.swift in Sources */,
+				638C34E3217AE9E6001F6977 /* Serie.swift in Sources */,
 				63C371A62179563200A90C2C /* SeriesPreviewDataSource.swift in Sources */,
+				638C34E9217AEA6E001F6977 /* Network.swift in Sources */,
+				638C34E1217AE996001F6977 /* SerieIntermediate.swift in Sources */,
+				638C34E7217AEA42001F6977 /* Schedule.swift in Sources */,
 				636B43DD2179504F00BDFA02 /* SerieCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

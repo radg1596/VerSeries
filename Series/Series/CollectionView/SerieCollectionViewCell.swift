@@ -20,8 +20,18 @@ class SerieCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-         super.prepareForReuse()
+        super.prepareForReuse()
         spinner.startAnimating()
+        spinner.isHidden = false
+        seriePreviewImageView.image = nil
     }
+    
+    func update(with image: UIImage?) {
+        guard let image = image else {return}
+        seriePreviewImageView.image = image
+        spinner.stopAnimating()
+        spinner.isHidden = true
+    }
+    
     
 }
