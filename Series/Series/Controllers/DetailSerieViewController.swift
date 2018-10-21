@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailSerieViewController: UIViewController {
     
@@ -71,7 +72,6 @@ class DetailSerieViewController: UIViewController {
     
     func dayListToString(days: [String]) -> String {
         return days.reduce("", {$0 + $1 + " "})
-
     }
 
     
@@ -84,6 +84,15 @@ class DetailSerieViewController: UIViewController {
                 self.episodesTableView.reloadData()
             }
         }
+    }
+    
+    
+    
+    @IBAction func showWebSite(_ sender: UIButton) {
+        guard let urlString = serie.officialSite, let url = URL(string: urlString ) else {return}
+        let safariViewController = SFSafariViewController(url: url)
+        present(safariViewController, animated: true, completion: nil)
+        
     }
     /*
     // MARK: - Navigation
