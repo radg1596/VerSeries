@@ -11,8 +11,8 @@ import Foundation
 struct Chapter: Codable {
     
     let name: String
-    let summary: String
-    let imageURL: ImageURL
+    let summary: String?
+    let imageURL: ImageURL?
     let number: Int
     let season: Int
     

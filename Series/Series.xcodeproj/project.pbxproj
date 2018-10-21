@@ -25,6 +25,7 @@
 		63ACA876217C004100340779 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACA875217C004100340779 /* StringExtension.swift */; };
 		63C371A62179563200A90C2C /* SeriesPreviewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C371A52179563200A90C2C /* SeriesPreviewDataSource.swift */; };
 		63C371A82179577E00A90C2C /* SeriesPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C371A72179577E00A90C2C /* SeriesPreviewViewController.swift */; };
+		63F31354217C2A2300E5E85D /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F31353217C2A2300E5E85D /* PickerViewController.swift */; };
 		63F418AB217BEFDF009D67C6 /* DetailSerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F418AA217BEFDF009D67C6 /* DetailSerieViewController.swift */; };
 		63F418AE217BF6AB009D67C6 /* ChapterTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F418AD217BF6AB009D67C6 /* ChapterTableViewDataSource.swift */; };
 		63F418B0217BF958009D67C6 /* ChapterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F418AF217BF958009D67C6 /* ChapterTableViewCell.swift */; };
@@ -72,6 +73,7 @@
 		63ACA875217C004100340779 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		63C371A52179563200A90C2C /* SeriesPreviewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesPreviewDataSource.swift; sourceTree = "<group>"; };
 		63C371A72179577E00A90C2C /* SeriesPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesPreviewViewController.swift; sourceTree = "<group>"; };
+		63F31353217C2A2300E5E85D /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		63F418AA217BEFDF009D67C6 /* DetailSerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSerieViewController.swift; sourceTree = "<group>"; };
 		63F418AD217BF6AB009D67C6 /* ChapterTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTableViewDataSource.swift; sourceTree = "<group>"; };
 		63F418AF217BF958009D67C6 /* ChapterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTableViewCell.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		63F418AC217BF002009D67C6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63F31353217C2A2300E5E85D /* PickerViewController.swift */,
 				63F418AA217BEFDF009D67C6 /* DetailSerieViewController.swift */,
 			);
 			path = Controllers;
@@ -370,6 +373,7 @@
 				638C34E1217AE996001F6977 /* SerieIntermediate.swift in Sources */,
 				638C34E7217AEA42001F6977 /* Schedule.swift in Sources */,
 				636B43DD2179504F00BDFA02 /* SerieCollectionViewCell.swift in Sources */,
+				63F31354217C2A2300E5E85D /* PickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

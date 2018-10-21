@@ -29,7 +29,7 @@ struct Serie: Codable, CustomStringConvertible {
     }
     
     var description: String {
-        return "(imageURL: \(imageURL.medium), name: \(name), summary: \(summary), officialSite: \(officialSite ?? ""), schedule: \(schedule.time) \(schedule.days.map{$0})"
+        return "(id: \(id), imageURL: \(imageURL.medium), name: \(name), summary: \(summary), officialSite: \(officialSite ?? ""), schedule: \(schedule.time) \(schedule.days.map{$0})"
     }
     
 }
