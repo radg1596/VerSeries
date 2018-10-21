@@ -31,5 +31,28 @@ class ChapterTableViewCell: UITableViewCell {
         chapterNumberLabel.text = nil
         descriptionChapterLabel.text = nil
     }
+    
+    func configureCell(with episode: Chapter) {
+        
+        chapterNumberLabel.text = "Episode \(episode.number): \(episode.name)"
+        if let episodeSummary = episode.summary {
+            if !episodeSummary.isEmpty {
+                descriptionChapterLabel.text = episode.summary?.clearTags()
+                
+            }
+            descriptionChapterLabel.text = "Summary not available"
+        }
+        if let urlImage = episode.imageURL?.medium {
+            SeriesService.shared.getPhoto(urlString: urlImage) { (image) in
+                if let image = image {
+                    self.chapterImageView.image = image
+                }
+            }
+        }
+        else {
+            chapterImageView.image = UIImage(named: "notAvailable")
+        }
+        
+    }
 
 }

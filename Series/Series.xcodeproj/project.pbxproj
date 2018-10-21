@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630AA583217D2FCB00864EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 630AA582217D2FCB00864EA9 /* Assets.xcassets */; };
 		636B43AB21793F4200BDFA02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B43AA21793F4200BDFA02 /* AppDelegate.swift */; };
 		636B43B021793F4200BDFA02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636B43AE21793F4200BDFA02 /* Main.storyboard */; };
-		636B43B221793F4500BDFA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B43B121793F4500BDFA02 /* Assets.xcassets */; };
 		636B43B521793F4500BDFA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636B43B321793F4500BDFA02 /* LaunchScreen.storyboard */; };
 		636B43C021793F4500BDFA02 /* SeriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B43BF21793F4500BDFA02 /* SeriesTests.swift */; };
 		636B43CB21793F4500BDFA02 /* SeriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B43CA21793F4500BDFA02 /* SeriesUITests.swift */; };
@@ -49,10 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		630AA582217D2FCB00864EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		636B43A721793F4200BDFA02 /* Series.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Series.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636B43AA21793F4200BDFA02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		636B43AF21793F4200BDFA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		636B43B121793F4500BDFA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		636B43B421793F4500BDFA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		636B43B621793F4500BDFA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636B43BB21793F4500BDFA02 /* SeriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +143,7 @@
 				6362EC62217AE76A00DE9F26 /* Delegates */,
 				636B43DE2179543B00BDFA02 /* CollectionView */,
 				636B43AE21793F4200BDFA02 /* Main.storyboard */,
-				636B43B121793F4500BDFA02 /* Assets.xcassets */,
+				630AA582217D2FCB00864EA9 /* Assets.xcassets */,
 				636B43B321793F4500BDFA02 /* LaunchScreen.storyboard */,
 				636B43B621793F4500BDFA02 /* Info.plist */,
 			);
@@ -331,7 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				636B43B521793F4500BDFA02 /* LaunchScreen.storyboard in Resources */,
-				636B43B221793F4500BDFA02 /* Assets.xcassets in Resources */,
+				630AA583217D2FCB00864EA9 /* Assets.xcassets in Resources */,
 				636B43B021793F4200BDFA02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

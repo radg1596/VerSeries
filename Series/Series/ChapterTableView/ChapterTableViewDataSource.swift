@@ -22,7 +22,8 @@ class ChapterTableViewDataSource: UIViewController,  UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as! ChapterTableViewCell
         
         let episode = episodes[indexPath.row]
-        
+        cell.configureCell(with: episode)
+        /*
         cell.chapterNumberLabel.text = "Episode \(episode.number)"
         cell.descriptionChapterLabel.text = episode.summary?.clearTags() ?? "Not available"
         
@@ -32,7 +33,7 @@ class ChapterTableViewDataSource: UIViewController,  UITableViewDataSource {
                     cell.chapterImageView.image = image
                 }
             }
-        }
+        }*/
 
         
         return cell
