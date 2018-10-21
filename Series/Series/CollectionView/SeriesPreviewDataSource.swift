@@ -29,5 +29,5 @@ class SeriesPreviewDataSource: NSObject, UICollectionViewDataSource {
         return cell
     }
     
-
+    
 }

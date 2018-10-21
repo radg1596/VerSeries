@@ -42,7 +42,7 @@ class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
         
         let query = searchTextField.text ?? ""
         SeriesService.shared.getSeries(query: query) { (series) in
-            if let series = series {
+            if let series = series, series.isEmpty == false {
                 self.seriesPreviewDataSource.series = series
             }
             else {
@@ -52,17 +52,20 @@ class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
             self.collectionView.reloadData()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
-        
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let indexPathSelected = collectionView.indexPathsForSelectedItems?.first else {return}
+        let serie = seriesPreviewDataSource.series[indexPathSelected.row]
+        
+        let destionationVC = segue.destination as? DetailSerieViewController
+        destionationVC?.serie = serie
     }
-    */
+    
+    
 
 }

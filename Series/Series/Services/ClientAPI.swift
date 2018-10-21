@@ -31,7 +31,6 @@ struct ClientAPI {
     func getData(endPoint: APIEndPoint, completion: @escaping (Data) -> Void ) {
         let urlString = baseURLString + endPoint.path()
         let url = URL(string: urlString)!
-        print(url.description)
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 DispatchQueue.main.async {completion(data)}
