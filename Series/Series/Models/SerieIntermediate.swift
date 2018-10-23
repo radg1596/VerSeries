@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Es una estructura intermedia que nos permite seleccionar las series del JSON que traemos de la direccion base al realizar la consulta
 struct SerieIntermediate: Codable {
     let serie: Serie
     enum CodingKeys: String, CodingKey {

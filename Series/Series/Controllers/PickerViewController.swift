@@ -8,6 +8,13 @@
 
 import UIKit
 
+/*
+ Este controllador se encarga de que el picker siempre tenga
+ el total de temporadas de cada serie
+ El arreglo "seasons" contiene todas las temporadas:
+ ejemplo: seasons = ["1", "2", "3"]
+ */
+
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var seasons: [String] = []
@@ -28,17 +35,5 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return seasons[row]
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -8,6 +8,11 @@
 
 import UIKit
 
+/*
+ Se encarga de proveer información al collectionView
+ a partir de una lista de objetos "Serie"
+ */
+
 class SeriesPreviewDataSource: NSObject, UICollectionViewDataSource {
     
     var series: [Serie] = []
@@ -16,6 +21,7 @@ class SeriesPreviewDataSource: NSObject, UICollectionViewDataSource {
         return series.count
     }
     
+    //Utiliza un tipo de Celda llamado serieCell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "serieCell", for: indexPath) as! SerieCollectionViewCell
         
@@ -28,6 +34,7 @@ class SeriesPreviewDataSource: NSObject, UICollectionViewDataSource {
         
         return cell
     }
+    
     
     
 }

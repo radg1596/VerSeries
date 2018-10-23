@@ -8,7 +8,17 @@
 
 import Foundation
 
-struct Serie: Codable, CustomStringConvertible {
+/*Abstracción de una serie como objeto
+ Contiene:
+ -id
+ -urls de imagen
+ -nombre
+ -resumen
+ -agenda
+ -su network, es decir compañía
+ -URL del sitio oficial
+ */
+struct Serie: Codable {
 
     let id: Int
     let imageURL: ImageURL
@@ -26,10 +36,6 @@ struct Serie: Codable, CustomStringConvertible {
         case network
         case schedule
         case officialSite
-    }
-    
-    var description: String {
-        return "(id: \(id), imageURL: \(imageURL.medium), name: \(name), summary: \(summary), officialSite: \(officialSite ?? ""), schedule: \(schedule.time) \(schedule.days.map{$0})"
     }
     
 }

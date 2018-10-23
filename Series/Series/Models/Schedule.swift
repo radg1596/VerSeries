@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+/*Agenda de la serie
+ Contiene la hora en String, y un arreglo de días (de String)
+ */
 struct Schedule: Codable {
     let days: [String]
     let time: String

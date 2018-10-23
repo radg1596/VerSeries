@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Se trata de la compañía de la Serie
 struct Network: Codable {
     let name: String
 }

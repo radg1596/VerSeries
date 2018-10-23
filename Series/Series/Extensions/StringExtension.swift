@@ -8,12 +8,15 @@
 
 import Foundation
 
+
+/*
+ Está extensión de String nos permite eliminar los características html de una cadena
+ -Por ejemplo "<p/> Hola mundo </p>" -> "Hola mundo"
+ */
 extension String {
     
     func clearTags() -> String {
-        
         return self.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
-        
     }
     
 }
