@@ -44,14 +44,13 @@ class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
      Cuando el textField de búsqueda es editado, entonces se vuelven a obtener las series y se recarga la información de la tabla
      */
     @IBAction func textFieldChanged(_ sender: UITextField, forEvent event: UIEvent) {
-                
         notSeriesLabel.isHidden = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
         let query = searchTextField.text ?? ""
         SeriesService.shared.getSeries(query: query) { (series) in
             if let series = series, series.isEmpty == false {
                 self.seriesPreviewDataSource.series = series
+                self.notSeriesLabel.isHidden = true
             }
             else {
                 self.seriesPreviewDataSource.series = []

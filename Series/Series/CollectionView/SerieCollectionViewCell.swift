@@ -18,6 +18,8 @@ class SerieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var serieTitleLabel: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
+    var currentURLImage: String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         spinner.startAnimating()
@@ -31,11 +33,13 @@ class SerieCollectionViewCell: UICollectionViewCell {
     }
     
     //Recibe una imagen y configura la celda
-    func update(with image: UIImage?) {
-        guard let image = image else {return}
-        seriePreviewImageView.image = image
-        spinner.stopAnimating()
-        spinner.isHidden = true
+    func update(with urlImage: String) {
+        SeriesService.shared.getPhoto(urlString: urlImage) { (image) in
+            guard let image = image, urlImage == self.currentURLImage else {return}
+            self.seriePreviewImageView.image = image
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
+        }
     }
     
     
