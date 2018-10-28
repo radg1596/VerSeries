@@ -41,7 +41,10 @@ struct SeriesService {
                 let series = intermediateModel.map({$0.serie})
                 DispatchQueue.main.async { completion(series) }
             }
-            else { DispatchQueue.main.async {completion (nil) } }
+            else {
+                print("We can not decode the data")
+                DispatchQueue.main.async {completion (nil) }
+            }
         }
     }
     

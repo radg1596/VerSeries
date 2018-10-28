@@ -48,7 +48,7 @@ class DetailSerieViewController: UIViewController {
         hourLabel.text = serie.schedule.time
         daysTextLabel.text = dayListToString(days: serie.schedule.days)
         spinnerImageView.startAnimating()
-        SeriesService.shared.getPhoto(urlString: serie.imageURL.original) { (image) in
+        SeriesService.shared.getPhoto(urlString: serie.imageURL?.original ?? "null") { (image) in
             if let image = image {
                 self.serieImageView.image = image
               self.spinnerImageView.stopAnimating()
