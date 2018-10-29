@@ -21,7 +21,7 @@ import Foundation
 struct Serie: Codable {
 
     let id: Int
-    let imageURL: ImageURL
+    let imageURL: ImageURL?
     let name: String
     let summary: String
     let schedule: Schedule

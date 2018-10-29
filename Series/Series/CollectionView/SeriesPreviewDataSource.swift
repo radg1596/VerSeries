@@ -28,8 +28,8 @@ class SeriesPreviewDataSource: NSObject, UICollectionViewDataSource {
         let serie = series[indexPath.row]
         
         cell.serieTitleLabel.text = serie.name
-        cell.currentURLImage = serie.imageURL.medium
-        cell.update(with: serie.imageURL.medium)
+        cell.currentURLImage = serie.imageURL?.medium ?? "null"
+        cell.update(with: serie.imageURL?.medium ?? "null")
         
         return cell
     }

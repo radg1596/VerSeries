@@ -46,7 +46,7 @@ class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
     @IBAction func textFieldChanged(_ sender: UITextField, forEvent event: UIEvent) {
         notSeriesLabel.isHidden = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        let query = searchTextField.text ?? ""
+        let query = searchTextField.text ?? "null"
         SeriesService.shared.getSeries(query: query) { (series) in
             if let series = series, series.isEmpty == false {
                 self.seriesPreviewDataSource.series = series
