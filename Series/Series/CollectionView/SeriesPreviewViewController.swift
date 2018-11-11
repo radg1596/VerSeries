@@ -11,7 +11,7 @@ import UIKit
 class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var notSeriesLabel: UILabel!
     
     let seriesPreviewDataSource = SeriesPreviewDataSource()
@@ -23,10 +23,11 @@ class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
         //Tabla de series
         collectionView.dataSource = seriesPreviewDataSource
         collectionView.delegate = self
-        //TextField
-        searchTextField.delegate = textFieldDelegate
         //Collection
         adjustColectionViewColumns()
+        //Searchbar
+        searchBar.delegate = self
+        
     }
     
     func adjustColectionViewColumns() {
@@ -39,15 +40,27 @@ class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
+    // MARK: - Navigation
 
-    /*
-     Cuando el textField de búsqueda es editado, entonces se vuelven a obtener las series y se recarga la información de la tabla
-     */
-    @IBAction func textFieldChanged(_ sender: UITextField, forEvent event: UIEvent) {
+    //  Le envía a la siguiente vista la serie que el usuario a seleccionado del collectionView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPathSelected = collectionView.indexPathsForSelectedItems?.first else {return}
+        let serie = seriesPreviewDataSource.series[indexPathSelected.row]
+        
+        let destionationVC = segue.destination as? DetailSerieViewController
+        destionationVC?.serie = serie
+    }
+    
+}
+
+/**
+ Cuando el textField de búsqueda es editado, entonces se vuelven a obtener las series y se recarga la información de la tabla
+ */
+extension SeriesPreviewViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         notSeriesLabel.isHidden = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        let query = searchTextField.text ?? "null"
-        SeriesService.shared.getSeries(query: query) { (series) in
+        SeriesService.shared.getSeries(query: searchText) { (series) in
             if let series = series, series.isEmpty == false {
                 self.seriesPreviewDataSource.series = series
                 self.notSeriesLabel.isHidden = true
@@ -60,22 +73,4 @@ class SeriesPreviewViewController: UIViewController, UICollectionViewDelegate {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
-    
-    
-    // MARK: - Navigation
-
-    //  Le envía a la siguiente vista la serie que el usuario a seleccionado del collectionView
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPathSelected = collectionView.indexPathsForSelectedItems?.first else {return}
-        let serie = seriesPreviewDataSource.series[indexPathSelected.row]
-        
-        let destionationVC = segue.destination as? DetailSerieViewController
-        destionationVC?.serie = serie
-    }
-    
-    //Es para que el se oculte el teclado
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        searchTextField.resignFirstResponder()
-    }
-    
 }
